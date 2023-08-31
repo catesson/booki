@@ -1,0 +1,584 @@
+/*Sommaire 
+1 générique
+2 Header
+3 Corps
+    3.1 recherche
+    3.2 filtres
+    3.3 hébergement marseille
+    3.4 les plus popilaire
+4. Footer
+5 Responsive tablette
+    5.1 contenu
+    5.2 footer
+6 Responsive smartphone
+    6.1 header
+    6.2 contenu
+    6.3 footer
+*/
+
+/*font*/
+/*@font-face {
+    font-family: 'Raleway-regular';
+    src: url('fonts/Raleway-Regular.woff2') format('woff2'),
+        url('fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Raleway-bold';
+    src: url('fonts/Raleway-Bold.woff2') format('woff2'),
+        url('fonts/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}*/
+
+
+
+
+/*1 générique*/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+p{
+    font-family: 'Raleway', sans-serif;
+    margin:10px 0;
+}
+ li{
+    font-family: 'Raleway', sans-serif;
+}
+h1, h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+h1{
+    font-size: 21px;
+}
+h2{
+    font-size: 14px;
+}
+input{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color:black
+}
+.black{
+    color:black;
+}
+.full-taille{
+    Width:100%;
+}
+/*2 Header*/
+header{
+    width:95%;
+    max-width: 1440px;
+    min-width: 942px;
+    margin: auto;
+}
+.contenu-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.contenu-header img{
+    margin-left:20px;
+    width:100px;
+}
+.contenu-header nav ul{
+    margin: 0;
+    height: 140px;
+}
+.contenu-header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenu-header nav ul li{
+    list-style: none;
+    padding: 62px 50px;
+    height: min-content;
+    border-top: 2px solid #0065fc00;
+}
+.contenu-header nav ul li:hover{
+    border-top: 2px solid  #0065FC ;
+    
+}
+/*3 Corps*/
+.contenu-corps{
+    width:95%;
+    max-width: 1440px;
+    min-width: 942px;
+    margin: auto;
+}
+/*3.1 recherche*/
+#recherche{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+}
+#recherche button, #recherche input{
+    height: 50px;
+    border: 0px;
+}
+#recherche button[name="loupe"]{
+    display: none;
+}
+#recherche button[name="rechercher"]{
+    background-color: #0065FC;
+    cursor: pointer;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding:0 20px;
+}
+#search{
+    display: flex;
+    width: fit-content;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 40px 0 0 0;
+}
+#search div{
+    background-color: #F2F2F2;  
+    width:51px;
+    margin-right: 5px;
+    text-align: center;
+}
+#search div i{
+    line-height: 50px;
+}
+/*3.2 filtres*/
+.filtres{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 25px 0 0 0;
+}
+.filtres p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+.les-filtres{
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 0;
+    margin: 0 0 0 15px ;
+    border-radius: 37px;
+    border: 2px solid #d9d9d9;
+}
+.les-filtres:hover{
+    background-color: #DEEBFF;
+    color :#0065FC;
+}
+form{
+    width: 100%;
+}
+.les-filtres .cercle{
+    height: 50px; 
+	width: 50px; 
+	background-color: #DEEBFF;
+	border-radius: 50%; 
+    margin-left: -2px;
+    text-align: center;
+    border: none;
+}
+.les-filtres .cercle i{
+    line-height: 50px;
+    color :#0065FC
+}
+.cercle i{
+    line-height: 20px;
+    color :#0065FC;
+
+}
+.cercle{
+    height: 19px; 
+	width: 19px; 
+    min-width: 19px;
+	background-color: white;
+	border-radius: 50%;
+    text-align: center;
+    margin-right:10px;
+    border: 1px solid #b3b3b3;
+}
+.info{
+    width: 100%;
+    display: flex;
+    margin:15px 0 25px 0
+}
+.info p{
+    margin: 3px;
+}
+/* 3.3 hébergement marseille*/
+#marseille{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%
+    
+}
+#marseille section{
+    width:65%;
+    height: max-content;
+    background-color: #F2F2F2;  
+    border-radius: 30px;
+}
+.hebergement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.hebergement article{
+    background-color: white;
+    margin-top: 30px;
+    width:28%;
+    height: 199px;
+    border: 5px solid white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+    overflow: hidden;
+}
+
+.hebergement img{
+    object-fit: cover;
+}
+#marseille h1{
+    margin: 30px 0 0 20px;
+}
+#marseille aside h1{
+    margin: 30px 0 0 50px;
+}
+#marseille h2{
+    margin: 10px 0 10px 10px;
+}
+#marseille p{
+    font-size: 14px;
+    margin: 0 0 10px 10px;
+}
+#marseille p span{
+    font-weight: bold
+}
+
+.derouler{
+    padding:10px;
+    margin:43px 15px;
+    display: block;
+    width: 200px;
+}
+#marseille .derouler p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+/*faire les étoile */
+/* Par défaut, une étoile est en gris,   avec un padding */
+   .fa-star {
+	color:  #cfcfcf;  
+	padding: 1px;
+}
+/* Si elle porte en plus la classe '.blue', elle sera en bleu. */
+.fa-star.blue {
+	color: #0065FC;
+}
+
+/* Le parent global '.rating' positionne le groupe des étoiles avec la même marge que le texte */
+.rating {
+    margin: 0 0 0 10px ;
+    
+}
+/*positionner les étoiles en bas des bloc les plus populaire*/
+aside article .rating{
+    position: absolute;
+    bottom: 8px;
+}
+/*étoile noir les plus populaire*/
+.fav-stars i.black {
+    color:black;
+    margin: 30px 30px 0 0;
+}
+.fav-stars{
+    display: flex;
+    justify-content: space-between;
+}
+
+	/* Le groupe '.stars' positionne les étoiles
+		 les unes à côté des autres sans espacements. */
+	.stars {
+		display: inline-flex;
+		font-size: 12px;
+	}
+
+	/**
+	 * Et là opère la magie du ':hover' !
+	 */
+
+	/* A l'état :hover sur le parent '.rating',
+		 on force TOUTES les étoiles à passer en blue. */
+	.stars:hover .fa-star {
+		color: #0065FC;
+	}
+	/* Et si la souris survole une étoile en particulier,
+		 on sélectionne toutes les étoiles qui sont APRÈS celle-ci
+		 grâce à l'opérateur '~' et on les force en GRIS */
+	.stars .fa-star:hover ~ .fa-star {
+		color: #cfcfcf;  
+	}
+/* 3.4 les plus popilaire*/
+.favori article{ 
+    position: relative;
+    width:81%;
+    height: 144px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 30px; 
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+    overflow: hidden;
+}
+
+#marseille aside{
+    width:33%;
+    height: max-content;
+    padding-bottom:56px ;
+    border-radius: 30px;
+    background-color: #F2F2F2;  
+}
+.favori img{
+    object-fit: cover;
+    height: 150px;
+    width: 132px;
+}
+.favori .vertical-img{
+    height: 200px;
+}
+.favori a{
+    display: flex;  
+}
+.favori article div{
+    width: 63%;
+}
+#activite{
+    margin: 30px 0 0 0;
+}
+.contenu-activite{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+    width:100%;
+
+}
+.contenu-activite div{
+    width:23%;
+    height: 444px;
+ 
+}
+.contenu-activite h2{
+    line-height: 56px;
+    margin-left: 20px;
+}
+.contenu-activite article{
+    margin-bottom: 22px;
+    background-color: white;
+    box-shadow:0 0 10px rgb(0 0 0 / 12%);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.contenu-activite div article img{
+    object-fit: cover;
+    width:100%;    
+}
+
+
+/*4 Footer*/
+footer{
+    background-color: #F2F2F2;  
+}
+.contenu-footer{
+    width:95%;
+    max-width: 1440px;
+    margin: auto;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .contenu-footer nav{
+    width: 30%;
+    margin-top:50px;
+    padding-bottom: 50px;
+}
+footer h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+footer ul li{
+    margin: 20px 0 0 0;
+    color:black
+}
+/*5 Responsive tablette*/
+@media all and (max-width: 992px) {
+    /*5.1 contenu*/
+    .contenu-corps, header,  #marseille section, #marseille aside, .contenu-activite, .recherche{
+        width: 100%;
+        min-width: 301px;
+    }
+    #recherche{
+        width: 92%;
+    }
+    .les-filtres{
+        margin: 15px 0 0 15px;
+    }
+
+    #marseille{
+        flex-direction: column-reverse;
+    }
+    #marseille section{
+        background-color: white;
+    }
+    .hebergement article{
+        width: 40%;
+    }
+    .favori img{
+        width:37%;
+        min-width: 100px;
+        height: 200px;
+    }
+    .favori .vertical-img{
+        height: 146px;
+    }
+    #activite{
+        margin:30px 0 0 50px;
+    }
+    .contenu-activite{
+        justify-content: space-around;
+        margin-top: 0;
+    }
+    .contenu-activite div{
+        width:40%;
+        margin-top: 33px;
+    }
+    /*5.2 footer*/
+    footer .contenu-footer {
+        justify-content: center;
+    }
+    
+}
+/*6 Responsive smartphone*/
+@media all and (max-width: 768px){
+    /*6.1 header*/
+    .contenu-header{
+        justify-content: center;
+    }
+    .contenu-header img{
+        margin: 10px 0;
+    }
+    header .contenu-header nav{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    header .contenu-header ul{
+        height: auto;
+    }
+    header .contenu-header nav ul li{
+        width: 50%;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 0px;
+        border-bottom: 3px solid  #0065FC00 ;
+        
+    }
+    header .contenu-header nav ul li:hover{
+        border-bottom: 3px solid  #0065FC ;
+        border-top: 0px;
+    }
+    /*6.2 contenu*/
+    #recherche, #marseille section , .contenu-footer div, .favori article, footer .contenu-footer nav, .contenu-activite, .fav-stars /*.contenu-corps,  footer .contenu-footer div*/ {
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #recherche button[name="rechercher"]{
+        display: none;
+    }
+    #recherche button[name="loupe"]{
+        display: block;
+        background-color: #0065FC;
+        cursor: pointer;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+        font-size: 18px;
+        padding:0 20px;
+        border-radius: 12px;
+    }
+    #marseille .favori article, #marseille .hebergement article{
+        margin-top: 15px;
+    }
+    #marseille .fav-stars h1{
+        margin-left: 0;
+    }
+    .hebergement article, .contenu-activite div, footer{
+        width:100%
+    }
+    #marseille aside{
+        border-radius: 0px;
+    }
+    #marseille h1{
+        margin-left: 0;
+    }
+    #activite {
+        display: block;
+        width: 88%;
+        margin: 0 auto 20px;
+    }
+    .filtres p:nth-child(1){
+        width: 100%;
+    }
+    .filtres a{
+        margin-right: 20px;
+    }
+    .filtres, .info{
+        align-items: start;
+        justify-content: flex-start;
+    }
+    .les-filtres{
+        margin: 15px 0 0 0 ;
+    }
+    form{
+        text-align: left;
+    }
+    .contenu-activite div{
+        height: auto;
+        margin-top: 0;
+    }
+    .contenu-activite div article{
+        height: 190px;
+    }
+    .contenu-activite div article img{
+        height: 134px;
+    }
+    /*6.3* footer*/
+    footer .contenu-footer {
+        justify-content: space-around;
+    }
+}
+
+
+
